@@ -3,6 +3,8 @@ const fs = require("fs");
 let path = require("path");
 let filePath = path.join(__dirname, "../db/db.json");
 
+const router = express.Router();
+
 module.exports = function(app) {
   app.get("/api/notes", function(req, res) {
     console.log("in api/notes");
@@ -59,3 +61,4 @@ module.exports = function(app) {
     });
   });
 };
+module.exports = router;
